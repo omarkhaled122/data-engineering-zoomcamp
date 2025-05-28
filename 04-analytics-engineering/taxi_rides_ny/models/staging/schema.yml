@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: staging
+    database: zoomcamp-taxi-kestra
+    schema: zoomcamp_kestra_gcp_taxi_bq_dataset
+    tables:
+      - name: yellow_tripdata_2019-01
+      - name: green_tripdata
