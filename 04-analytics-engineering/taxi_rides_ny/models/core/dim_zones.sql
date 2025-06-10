@@ -1,8 +1,7 @@
-{{ config(materialized='table') }}
-
-select 
-    locationid, 
-    borough, 
-    zone, 
-    replace(service_zone,'Boro','Green') as service_zone 
-from {{ ref('taxi_zone_lookup') }}
+SELECT
+    locationid,
+    borough,
+    zone,
+    replace(service_zone, 'boro', 'green') AS service_zone 
+From
+    {{ ref('taxi_zone_lookup') }}
