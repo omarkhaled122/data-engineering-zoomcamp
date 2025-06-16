@@ -3,6 +3,7 @@
         materialized='table'
     )
 }}
+
 with tripdata as (
     select
         tripid,
@@ -17,6 +18,7 @@ with tripdata as (
         trip_distance > 0 and
         payment_type_description in ('Credit card', 'Cash')
 )
+
 select
     service_type,
     year,
