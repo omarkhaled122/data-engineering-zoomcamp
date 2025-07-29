@@ -157,7 +157,7 @@ models:
       - name: service_zone
         description: Service zone classification of pickup area.
 
-  - name: fact_duration_percentile
+  - name: fct_fhv_monthly_zone_traveltime_p90
     description: >
       Percentile ranking of trip durations for FHV trips by pickup zone, month, and year.
       Helps identify outliers or long/short trips relative to others in the same zone and month.
@@ -177,7 +177,7 @@ models:
         tests:
           - not_null
 
-  - name: fact_fare_percentile
+  - name: fct_taxi_trips_monthly_fare_p95
     description: >
       Percentile ranking of fare amount per trip per service type, year, and month.
       Filters out trips with 0 distance or fare, and only includes common payment types.
@@ -197,7 +197,7 @@ models:
       - name: percentile
         description: Fare percentile within each (service_type, year, month) group.
 
-  - name: fact_yoy_revenue
+  - name: fct_taxi_trips_quarterly_revenue
     description: >
       Year-over-year growth of total revenue by service type and quarter.
       Compares current quarter revenue with the same quarter from the previous year.
